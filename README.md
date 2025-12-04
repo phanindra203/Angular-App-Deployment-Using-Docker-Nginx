@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+
+
+I developed and deployed an Angular application using a multi-stage Docker build and Nginx. First, I built the Angular project using a Node.js base image, installed all dependencies, and generated the production-ready files using ng build, which created the final dist folder. In the second stage, I used the Nginx image as a lightweight, high-performance web server and copied the built Angular files into its default hosting directory. I then built a Docker image and ran a container exposing port 8080, allowing the Angular application to be accessed through the browser. This project demonstrates practical DevOps concepts such as multi-stage Docker builds, efficient image creation, and serving front-end applications using Nginx inside Docker containers.
